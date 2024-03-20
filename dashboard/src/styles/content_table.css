@@ -1,0 +1,55 @@
+.table-container {
+  width: calc(100% - 0px);
+  margin: 40px auto;
+  padding: 0 20px;
+  overflow-x: auto;
+}
+
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container th:first-child,
+.table-container td:first-child {
+  border-left: none;
+}
+
+.table-container th:last-child,
+.table-container td:last-child {
+  border-right: none;
+}
+
+.table-container tbody tr:hover {
+  background-color: rgb(237, 236, 236);
+}
+
+.column-name {
+  width: 60%;
+}
+
+.column-rest {
+  width: auto;
+}
+
+.content-table-name {
+  display: flex;
+  margin-top: 6px;
+}
+
+.content-table-name svg {
+  font-size: 22px;
+  color: #5515ff;
+}
+
+.content-table-name .text {
+  padding-left: 15px;
+}
