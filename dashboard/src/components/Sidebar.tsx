@@ -1,10 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChartPie } from '@fortawesome/free-solid-svg-icons';
-import { faFolder } from '@fortawesome/free-regular-svg-icons';
-import { faCirclePlay } from '@fortawesome/free-regular-svg-icons';
-import { faChartBar  } from '@fortawesome/free-regular-svg-icons';
-import { faCog } from '@fortawesome/free-solid-svg-icons'; // Icono de engranaje sólido
+import { faChartPie, faFolder, faCirclePlay, faChartBar, faCog } from '@fortawesome/free-solid-svg-icons';
 import logoVideoTool from '../images/logo videoTool.png';
 
 import '../styles/sidebar.css';

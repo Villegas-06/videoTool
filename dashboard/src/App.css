@@ -1,18 +1,24 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(237, 237, 237) !important;
+  background-color: rgb(237, 236, 236) !important;
 }
 
 .app {
   display: flex;
-  position: relative;
-  height: 100vh;
 }
 
-.content {
+.content-wrapper {
   flex: 1;
+  height: calc(
+    100vh - 40px
+  ); /* Altura ajustada para que no se pierda en la pantalla */
   padding: 20px;
-  margin-left: 250px;
-  transition: margin-left 0.3s ease;
+  background-color: white;
+  overflow-y: auto;
+  margin-top: 28px; /* Separación desde la parte superior */
+  margin-left: 365px; /* Ancho de la barra lateral más espacio */
+  margin-right: 30px;
+  border-radius: 15px;
+  transition: margin-left 0.3s ease; /* Agregado para una transición suave */
 }

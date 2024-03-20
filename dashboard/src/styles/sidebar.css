@@ -1,15 +1,13 @@
 .sidebar {
   position: fixed;
-  top: 20px; /* Mover hacia abajo 20px desde la parte superior */
-  left: 20px; /* Mover hacia la izquierda 20px desde el borde izquierdo */
-  height: calc(
-    100vh - 40px
-  ); /* Altura ajustada para que no se pierda en la pantalla */
+  top: 20px;
+  left: 20px;
+  height: calc(100vh - 40px);
   width: 320px;
   background-color: white;
   transition: left 0.3s ease;
   z-index: 1000;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 .nav-logo {
