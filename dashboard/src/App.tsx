@@ -13,6 +13,7 @@ const App: React.FC = () => {
         <Sidebar />
         <div className="content-wrapper">
           <Routes>
+            <Route path="*" element={<Content />} />
             <Route path="/videos" element={<Content />} />
             <Route path="/videos/:id/:folderName" element={<Videos />} />
           </Routes>
