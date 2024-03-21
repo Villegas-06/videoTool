@@ -1,43 +1,104 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChartPie, faFolder, faCirclePlay, faChartBar, faCog } from '@fortawesome/free-solid-svg-icons';
-import logoVideoTool from '../images/logo videoTool.png';
+import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import {
+  faChartPie,
+  faFolder,
+  faCirclePlay,
+  faChartBar,
+  faCog,
+  faCircleQuestion,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logoVideoTool from "../images/logo videoTool.png";
 
-import '../styles/sidebar.css';
+import "../styles/sidebar.css";
 
 const Sidebar: React.FC = () => {
+  const { navSelect } = useParams<{ navSelect?: string }>();
+  const [selectedLink, setSelectedLink] = useState<string | null>(
+    navSelect || null
+  );
+
+  const handleLinkButton = (linkName: string) => {
+    setSelectedLink(linkName);
+  };
 
   return (
-    <div className='sidebar'>
+    <div className="sidebar">
       <nav className="sidebar-nav">
         <div className="container nav-logo">
           <img src={logoVideoTool} alt="" />
         </div>
         <ul>
-          <li className='nav-dashboard'>
-            <a href="/dashboard"> <FontAwesomeIcon icon={faChartPie} />
+          <li className="nav-dashboard">
+            <Link
+              to="/dashboard"
+              className={`dashboard ${
+                selectedLink === "dashboard" ? "selected" : ""
+              }`}
+              onClick={() => handleLinkButton("dashboard")}
+            >
+              <FontAwesomeIcon icon={faChartPie} />
               <p className="nav-text">Dashboard</p>
-            </a>
+            </Link>
           </li>
-          <li className='nav-videos'>
-            <a href="/videos"> <FontAwesomeIcon icon={faFolder} />
+          <li className="nav-videos">
+            <Link
+              to="/videos"
+              className={`videos ${
+                selectedLink === "videos" ? "selected" : ""
+              }`}
+              onClick={() => handleLinkButton("videos")}
+            >
+              <FontAwesomeIcon icon={faFolder} />
               <p className="nav-text">Videos</p>
-            </a>
+            </Link>
           </li>
-          <li className='nav-player'>
-            <a href="/player"> <FontAwesomeIcon icon={faCirclePlay} />
+          <li className="nav-player">
+            <Link
+              to="/player"
+              className={`player ${
+                selectedLink === "player" ? "selected" : ""
+              }`}
+              onClick={() => handleLinkButton("player")}
+            >
+              <FontAwesomeIcon icon={faCirclePlay} />
               <p className="nav-text">Player</p>
-            </a>
+            </Link>
           </li>
-          <li className='nav-analytics'>
-            <a href="/analytics"> <FontAwesomeIcon icon={faChartBar} />
+          <li className="nav-analytics">
+            <Link
+              to="/analytics"
+              className={`analytics ${
+                selectedLink === "analytics" ? "selected" : ""
+              }`}
+              onClick={() => handleLinkButton("analytics")}
+            >
+              <FontAwesomeIcon icon={faChartBar} />
               <p className="nav-text">Analytics</p>
-            </a>
+            </Link>
           </li>
-          <li className='nav-config'>
-            <a href="/config"> <FontAwesomeIcon icon={faCog} />
+          <li className="nav-config">
+            <Link
+              to="/config"
+              className={`config ${
+                selectedLink === "config" ? "selected" : ""
+              }`}
+              onClick={() => handleLinkButton("config")}
+            >
+              <FontAwesomeIcon icon={faCog} />
               <p className="nav-text">Configuraciones</p>
-            </a>
+            </Link>
+          </li>
+          <li className="nav-help">
+            <Link
+              to="/help"
+              className={`config ${selectedLink === "help" ? "selected" : ""}`}
+              onClick={() => handleLinkButton("help")}
+            >
+              <FontAwesomeIcon icon={faCircleQuestion} />
+              <p className="nav-text">Ayuda</p>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -49,18 +110,24 @@ const Sidebar: React.FC = () => {
           <p className="use">23.5 GB / 1TB </p>
         </div>
         <div className="progress-bar">
-          <div className="progress-bar-inner" style={{ width: '50%' }}></div> {/* Ejemplo de barra de progreso al 50% */}
+          <div className="progress-bar-inner" style={{ width: "50%" }}></div>
+          <div
+            className="progress-bar-remaining"
+            style={{ width: "50%" }}
+          ></div>
         </div>
         <div className="mensual">
           <p className="title">Banda Mensual:</p>
           <p className="use">3.4 TB / 5 TB</p>
         </div>
         <div className="progress-bar">
-          <div className="progress-bar-inner" style={{ width: '68%' }}></div> {/* Ejemplo de barra de progreso al 68% */}
+          <div className="progress-bar-inner" style={{ width: "68%" }}></div>{" "}
+          <div
+            className="progress-bar-remaining"
+            style={{ width: "32%" }}
+          ></div>
         </div>
-        <button className="admin-plan">
-          Administrar plan
-        </button>
+        <button className="admin-plan">Administrar plan</button>
       </div>
     </div>
   );

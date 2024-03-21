@@ -1,75 +1,109 @@
 {
-    "videos": [{
-            "folder_id": 1,
-            "video_name": "Video 1",
-            "size": "500 MB",
-            "last_update": "2024-03-19"
-        },
-        {
-            "folder_id": 1,
-            "video_name": "Video 2",
-            "size": "300 MB",
-            "last_update": "2024-03-18"
-        },
-        {
-            "folder_id": 2,
-            "video_name": "Video 1",
-            "size": "700 MB",
-            "last_update": "2024-03-17"
-        },
-        {
-            "folder_id": 2,
-            "video_name": "Video 2",
-            "size": "400 MB",
-            "last_update": "2024-03-16"
-        },
-        {
-            "folder_id": 2,
-            "video_name": "Video 3",
-            "size": "100 MB",
-            "last_update": "2024-03-15"
-        },
-        {
-            "folder_id": 3,
-            "video_name": "Video 1",
-            "size": "400 MB",
-            "last_update": "2024-03-14"
-        },
-        {
-            "folder_id": 4,
-            "video_name": "Video 1",
-            "size": "600 MB",
-            "last_update": "2024-03-13"
-        },
-        {
-            "folder_id": 4,
-            "video_name": "Video 2",
-            "size": "350 MB",
-            "last_update": "2024-03-12"
-        },
-        {
-            "folder_id": 5,
-            "video_name": "Video 1",
-            "size": "300 MB",
-            "last_update": "2024-03-11"
-        },
-        {
-            "folder_id": 6,
-            "video_name": "Video 1",
-            "size": "800 MB",
-            "last_update": "2024-03-10"
-        },
-        {
-            "folder_id": 6,
-            "video_name": "Video 2",
-            "size": "250 MB",
-            "last_update": "2024-03-09"
-        },
-        {
-            "folder_id": 7,
-            "video_name": "Video 1",
-            "size": "300 MB",
-            "last_update": "2024-03-10"
-        }
-    ]
+  "videos": [
+    {
+      "folder_id": 1,
+      "video_name": "Mi primer video",
+      "size": "700 MB",
+      "length": "25:00",
+      "last_update": "11/sep/2021"
+    },
+    {
+      "folder_id": 1,
+      "video_name": "Introducción",
+      "size": "225.5 MB",
+      "length": "10:00",
+      "last_update": "22/jun/2022"
+    },
+    {
+      "folder_id": 1,
+      "video_name": "Hola Mundo",
+      "size": "500 MB",
+      "length": "13:00",
+      "last_update": "21/jun/2023"
+    },
+    {
+      "folder_id": 1,
+      "video_name": "Mi primer proyecto",
+      "size": "800 MB",
+      "length": "22:00",
+      "last_update": "5/abr/2023"
+    },
+    {
+      "folder_id": 1,
+      "video_name": "Mi segundo proyecto",
+      "size": "300 MB",
+      "length": "47:00",
+      "last_update": "23/jun/2022"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Entrenamiento.mp4",
+      "size": "7.3 GB",
+      "length": "04:11:37",
+      "last_update": "30/jun/2023"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Salida-al-mercado-versión nueva.mp4",
+      "size": "1.4 GB",
+      "length": "47:55",
+      "last_update": "22/jun/2022"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Como-cerrar-una-venta.mp4",
+      "size": "284 MB",
+      "length": "10:12",
+      "last_update": "11/sep/2021"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Crea-un-ticket-valioso.mp4",
+      "size": "4.3 GB",
+      "length": "03:55:22",
+      "last_update": "21/jun/2023"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Conquista-el-mercado-digital.mp4",
+      "size": "500 MB",
+      "length": "5:00",
+      "last_update": "5/abr/2022"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Entrenamiento.mp4",
+      "size": "7.3 GB",
+      "length": "04:11:37",
+      "last_update": "30/jun/2023"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Salida-al-mercado-versión nueva.mp4",
+      "size": "1.4 GB",
+      "length": "47:55",
+      "last_update": "22/jun/2022"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Como-cerrar-una-venta.mp4",
+      "size": "284 MB",
+      "length": "10:12",
+      "last_update": "11/sep/2021"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Crea-un-ticket-valioso.mp4",
+      "size": "4.3 GB",
+      "length": "03:55:22",
+      "last_update": "21/jun/2023"
+    },
+    {
+      "folder_id": 2,
+      "video_name": "Conquista-el-mercado-digital.mp4",
+      "size": "500 MB",
+      "length": "5:00",
+      "last_update": "5/abr/2022"
+    }
+  ]
 }

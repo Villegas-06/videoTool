@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(237, 236, 236) !important;
+  background-color: #f4f4f4 !important;
 }
 
 .app {
@@ -17,8 +17,39 @@ body {
   background-color: white;
   overflow-y: auto;
   margin-top: 28px; /* Separación desde la parte superior */
-  margin-left: 365px; /* Ancho de la barra lateral más espacio */
+  margin-left: 350px; /* Ancho de la barra lateral más espacio */
   margin-right: 30px;
   border-radius: 15px;
   transition: margin-left 0.3s ease; /* Agregado para una transición suave */
+}
+
+.checkbox input[type="checkbox"] {
+  /* Ocultar el checkbox por defecto */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 15px; /* Ancho del checkbox */
+  height: 15px; /* Altura del checkbox */
+  background-color: #fff;
+  border: 2px solid #ccc; /* Borde del checkbox */
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: white; /* Color de fondo cuando está seleccionado */
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+  content: "";
+  display: block;
+  width: 11.5px; /* Ancho del cuadrado dentro del checkbox */
+  height: 11.5px; /* Altura del cuadrado dentro del checkbox */
+  background-color: #5515ff; /* Color del cuadrado dentro del checkbox */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white; /* Borde del cuadrado dentro del checkbox */
+  border-radius: 2px; /* Bordes redondeados del cuadrado */
 }

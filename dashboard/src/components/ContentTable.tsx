@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import foldersJson from "../data/folders.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -43,30 +44,56 @@ const ContentTable: React.FC = () => {
       <table>
         <thead>
           <tr>
-            <th>
+            <th className="column-rest">
               {" "}
-              <input className="column-rest" type="checkbox" name="" id="" />
+              <p className="checkbox">
+                <input type="checkbox" id="checkbox1" />
+                <label htmlFor="checkbox1"></label>
+              </p>
             </th>
-            <th className="column-name">Nombre</th>
-            <th className="column-rest">Videos</th>
-            <th className="column-rest">Tama&ntilde;o</th>
-            <th className="column-rest">&#218;ltima modificaci&oacute;n</th>
+            <th className="column-name">
+              <p className="text">Nombre</p>
+            </th>
+            <th className="column-rest">
+              <p className="text">Videos</p>
+            </th>
+            <th className="column-rest">
+              <p className="text">Tama&ntilde;o</p>
+            </th>
+            <th className="column-rest">
+              <p className="text">&#218;ltima modificaci&oacute;n</p>
+            </th>
           </tr>
         </thead>
         <tbody>
           {folders.map((folder) => (
-            <tr key={folder.id}>
+            <tr key={folder.id} className="content-row">
               <td className="content-table-checkbox">
-                <input type="checkbox" name="" id="" />
+                <p className="checkbox">
+                  <input type="checkbox" name="" id="" />
+                </p>
               </td>
               <td className="content-table-name">
-                <FontAwesomeIcon icon={faFolder} />
-                <p className="text">{folder.folder_name}</p></td>
-              <td className="content-table-video_count">
-                {folder.video_count}
+                <Link
+                  to={`/videos/${folder.id}/${encodeURIComponent(
+                    folder.folder_name
+                  )}`}
+                >
+                  <p className="container">
+                    <FontAwesomeIcon icon={faFolder} />
+                    <span className="text">{folder.folder_name}</span>
+                  </p>
+                </Link>
               </td>
-              <td className="content-table-size">{folder.size}</td>
-              <td className="content-table-update">{folder.last_update}</td>
+              <td className="content-table-video_count">
+                <p className="text">{folder.video_count}</p>
+              </td>
+              <td className="content-table-size">
+                <p className="text">{folder.size}</p>
+              </td>
+              <td className="content-table-update">
+                <p className="text">{folder.last_update}</p>
+              </td>
             </tr>
           ))}
         </tbody>

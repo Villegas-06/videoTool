@@ -89,7 +89,7 @@ const Content: React.FC = () => {
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </form>
-        <ContentTable />
+      <ContentTable />
     </div>
   );
 };

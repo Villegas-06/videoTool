@@ -1,10 +1,10 @@
 .table-container {
-  width: calc(100% - 0px);
-  margin: 40px auto;
+  position: relative;
+  top: 50px;
+  width: 100%;
   padding: 0 20px;
   overflow-x: auto;
 }
-
 
 .table-container table {
   width: 100%;
@@ -16,24 +16,16 @@
   border-bottom: 1px solid #ccc;
   padding: 8px;
   text-align: left;
-}
-
-.table-container th:first-child,
-.table-container td:first-child {
-  border-left: none;
-}
-
-.table-container th:last-child,
-.table-container td:last-child {
-  border-right: none;
+  line-height: 0;
 }
 
 .table-container tbody tr:hover {
+  cursor: pointer;
   background-color: rgb(237, 236, 236);
 }
 
 .column-name {
-  width: 60%;
+  width: 55%;
 }
 
 .column-rest {
@@ -41,15 +33,35 @@
 }
 
 .content-table-name {
-  display: flex;
   margin-top: 6px;
+}
+
+.content-table-name a {
+  color: black;
 }
 
 .content-table-name svg {
   font-size: 22px;
   color: #5515ff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .content-table-name .text {
-  padding-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+.content-table-video_count p,
+.content-table-size p,
+.content-table-update p {
+  text-align: center;
+  vertical-align: middle;
+}
+
+thead th.column-rest:not(:first-child) p {
+  text-align: center;
+  vertical-align: middle;
 }

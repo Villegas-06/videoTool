@@ -3,7 +3,7 @@
   top: 20px;
   left: 20px;
   height: calc(100vh - 40px);
-  width: 320px;
+  width: 310px;
   background-color: white;
   transition: left 0.3s ease;
   z-index: 1000;
@@ -34,6 +34,7 @@
 }
 
 .sidebar-nav li {
+  margin-top: 10px;
   font-size: 18px;
 }
 
@@ -49,6 +50,12 @@
 }
 
 .sidebar-nav a:hover {
+  background-color: #4a00ff;
+  border-radius: 10px;
+  color: white;
+}
+
+.sidebar .selected {
   background-color: #4a00ff;
   border-radius: 10px;
   color: white;
@@ -72,9 +79,8 @@
   width: 90%;
   height: auto;
   margin: auto;
-  margin-top: 70px;
   padding: 20px;
-  background-color: #e6e6e6;
+  background-color: #f4f4f4;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -106,37 +112,48 @@
 }
 
 .progress-bar {
+  position: relative;
   width: 100%;
   height: 10px;
-  background-color: #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-top: 5px; /* Añadido para separar la barra de progreso */
+  background-color: #f0f0f0; /* Color de fondo de la barra de progreso */
+  overflow: hidden; /* Para ocultar el contenido que sobresale */
 }
 
 .progress-bar-inner {
   height: 100%;
-  background-color: #4a00ff;
-  border-radius: 5px;
+  background-color: #4a00ff; /* Color de la barra de progreso */
+  width: 50%; /* Ancho de la barra de progreso */
+  border-radius: 5px 0px 0px 5px;
+  position: relative; /* Agregamos position: relative */
+}
+
+.progress-bar-remaining {
+  position: absolute;
+  top: 0;
+  right: 0; /* Se coloca en el extremo derecho */
+  border-radius: 0px 5px 5px 0px;
+  height: 100%;
+  background-color: #dedeff; /* Color opaco para el resto de la barra */
+  width: calc(100% - 50%); /* Calcula el ancho restante */
 }
 
 .admin-plan {
   margin-top: 20px;
   padding: 10px 20px;
+  width: 16vh;
   background-color: #4a00ff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 500;
   transition: background-color 0.3s ease;
 }
 
 .admin-plan:hover {
   background-color: #3800c4;
 }
-
 
 @media only screen and (max-width: 768px) {
   .nav-plan-storage {
@@ -146,11 +163,13 @@
     margin: auto;
     margin-top: 20px; /* Reducir el margen superior para dispositivos portátiles */
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    max-height: calc(100vh - 200px); /* Altura máxima para evitar que se desborde en dispositivos portátiles */
+    max-height: calc(
+      100vh - 200px
+    ); /* Altura máxima para evitar que se desborde en dispositivos portátiles */
     overflow-y: auto; /* Agregar desplazamiento vertical si el contenido es demasiado grande */
   }
 
